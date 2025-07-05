@@ -7,16 +7,18 @@ html,body{
     height: 100%;
     width: 100%;
     margin-bottom: 200px;
+    background-color: rgb(36, 36, 36);
+    overflow-x: hidden;
 }
 
-.body{
+/* .body{
     background-color: rgb(36, 36, 36);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 
@@ -61,8 +63,21 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+.scroll{
+    position: relative;
+    /* transform: rotate(5deg) translate(50% 50%); */
+    /* top: 10px; */
+    background-color: red;
+    display: flex;
+    left: -220px;
+    width: 100%;
+}
 .heading2 {
-    top: 600px ;
+    top: 600px;
+
+
 }
 
 .heading1 span, .heading2 span {
@@ -114,8 +129,6 @@ h1 {
     font-size: 16px;
     overflow: hidden;
 }
-
-
 .content p span, .content h2 span {
     display: inline-block;
 }
@@ -123,7 +136,29 @@ h1 {
 
 
 
+.card1{
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
 
+.card2{
+    position: absolute;
+    top: 320px;
+    right: 50px;
+}
+
+.card3{
+    position: absolute;
+    top: 850px;
+    left: 150px;
+}
+
+.card4{
+    position: absolute;
+    top: 950px;
+    right: 30px;
+}
 
 
 
