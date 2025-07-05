@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.body{
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cursor {
+    z-index: 1000;
+    opacity: 0;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(109, 216, 109);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: scale 0.3s ease;
+    text-align: center; /* Center the icon */
+    line-height: 20px; /* Match height for vertical centering */
+}
+
+.cursor i {
+    font-size: 12px;
+    color: #000000;
+    transition: scale 0.3s ease;
+
+
+}
+
+
+
+
+
+h1 {
+    position: absolute;
+    /* pointer-events: none; */
+    transform: translate(-50%, -50%);
+    top: 10px;
+    left: 50%;
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0;
+    overflow: hidden;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading2 {
+    top: 600px ;
+}
+
+.heading1 span, .heading2 span {
+    display: inline-block;    
+}
+
+
+
+
+
+.img{
+    background-color: rgb(54, 9, 16);
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
