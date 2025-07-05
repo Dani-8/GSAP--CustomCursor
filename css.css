@@ -33,7 +33,6 @@ html,body{
     transition: scale 0.3s ease;
     text-align: center; /* Center the icon */
     line-height: 20px; /* Match height for vertical centering */
-    cursor: pointer;
 }
 
 .cursor i {
@@ -100,24 +99,26 @@ h1 {
     padding: 20px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    /* background-color: red; */
 }
 
 .content h2{
     font-size: 28px;
     margin-bottom: 10px;
-    background-color: lightblue;
-    display: inline-block;
+    /* background-color: rgb(35, 104, 126); */
     overflow: hidden;
 }
 .content p{
-    background-color: rgb(230, 193, 173);
+    /* background-color: rgb(126, 58, 111); */
     font-size: 16px;
-    display: inline-block;
     overflow: hidden;
 }
 
 
-
+.content p span, .content h2 span {
+    display: inline-block;
+}
 
 
 

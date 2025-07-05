@@ -12,9 +12,7 @@ document.addEventListener("mousemove", function(dets){
         scale = 3;
         cursor.innerHTML = dets.target.closest(".img") ? '<i class="fa-solid fa-arrow-right"></i>' : "";
 
-    }else if(dets.target.closest(".card")){
-        opacity = 1;
-        scale = 1;
+    }else{
         cursor.innerHTML = ""
     }
 
@@ -48,21 +46,30 @@ document.addEventListener("mousemove", function(dets){
 
 
 
+
+
+
 function animateText(selector) {
   const el = document.querySelector(selector);
-  el.innerHTML = el.textContent.split('').map(char => `<span>${char}</span>`).join('');
+
+  el.innerHTML = el.textContent
+    .split('')
+    .map(char => char === ' ' ? `<span>&nbsp;</span>` : `<span>${char}</span>`)
+    .join('');
+
   const spans = el.querySelectorAll('span');
+
+
   gsap.set(spans, { y: 100 });
   gsap.to(spans, {
     y: 0,
     stagger: 0.1,
     duration: 0.5,
     ease: 'back.out',
-    scrollTrigger: selector === '.heading2' ? {
-        trigger: el, 
-        markers: true,
-        start: 'top 70%' 
-      } : null
+    scrollTrigger: selector === '.heading2' ? { 
+      trigger: el, 
+      start: 'top 70%' } 
+      : null
   });
 }
 
@@ -74,11 +81,6 @@ animateText('.heading2');
 
 
 
-
-
-
-
-
 // CARD
 // CARD
 // CARD
@@ -86,9 +88,26 @@ animateText('.heading2');
 // CARD
 // CARD
 
+function animateCardTextp(cardTextp) {
+  gsap.set(cardTextp, { y: 70, opacity: 0})
 
-// var cardText = document.querySelector(".content p")
+  gsap.to(cardTextp, {
+    opacity: 1, 
+    y: 0,
+    duration: 1,
+    ease: 'back.out',
+  })
+}
+function animateCardTexth2(cardTexth2) {
+  gsap.set(cardTexth2, { y: -100, opacity: 0})
 
+  gsap.to(cardTexth2, {
+    opacity: 1, 
+    y: 0,
+    duration: 1,
+    ease: 'back.out',
+  })
+}
 
 gsap.from('.img img', {
     y: 800,
@@ -96,9 +115,9 @@ gsap.from('.img img', {
 
 })
 
-animateText(".content p");
+animateCardTexth2('.content h2');
+animateCardTextp('.content p');
 
-// console.log(cardText);
 
 
 
